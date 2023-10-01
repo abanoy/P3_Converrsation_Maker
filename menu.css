@@ -1,7 +1,12 @@
-﻿/************************* Classes *************************/
+﻿@font-face {
+    font-family: 'P3Font';
+    src: url('chiarostd_b.otf');
+}
+
+/************************* Classes *************************/
 body {
-    filter:drop-shadow(0 0 1vh rgb(0, 0, 0));
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: P3Font;
+    color: rgb(33,33,33,1);
     background-image: url("images/menu.gif");
     background-size: 200vh;
     height: 100%;
@@ -74,6 +79,8 @@ body {
 /***********************************************************/
 
 /************************* Module **************************/
+
+
 #cntFadeOut, #cntFadeIn {
     background-color: black;
     position:absolute;
@@ -92,369 +99,59 @@ body {
 }
 /***********************************************************/
 
-/*************************** Menu **************************/
-#cntContentInformation, #cntSelection, #cntSelection > div {
+/************************** Menu ***************************/
+
+#cntTextbox, #cntCharacters {
     height: 100%;
     padding: 0;
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5vh;
-    font-size: 5vh;
-    color: rgb(223, 223, 223);
     flex-flow: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
-#cntSelection {
+#cntCharacters {
+    weight: 100%;
+    border: 1px solid red;
+}
+
+#cntTextbox {
+    filter:drop-shadow(0 0 1vh rgb(0, 0, 0));
+}
+
+#imgTextbox {
+    width: 89.5vw;
+    height: 32.8vh;
+    position: absolute;
+    top: -33vh;
+
+}
+
+#lblNamespace {
+    color: rgb(21, 2, 81, 1);
+    position: absolute;
+    font-size: 6.3vh;
+    top: -32vh;
+    left: 23vh;
+
+}
+
+#lblTextboxText {
+    font-family: P3Font, Times, serif;
+    position: absolute;
+    font-size: 4.5vh;
+    width: 115vh;
+    top: -22vh;
+    left: 28vh;
+    height: 15vh;
+    row-gap: 5px;
+    line-height: 5vh;
+
+}
+
+#imgCharacter {
     width: 50vh;
-}
 
-#cntSelection > div {
-    width: 20.120724346076457vh;
-    height: 20.120724346076457vh;
-    gap: 0vh;
-    flex-flow: column;
-
-    background-color: rgb(0, 0, 0, 0.3);
-}
-
-#cntSelection > div > img {
-    width: 10.060362173038229vh;
-    height: 10.060362173038229vh;
-    filter: drop-shadow(0.5vh 0.5vh 0.6vh rgb(0, 0, 0));
-}
-
-#cntSelection > div > lbl {
-    color: white;
-    font-size: 4vh;
-}
-
-#imgPreview {
-    width: 80.48289738430583vh;
-    height: 60.36217303822938vh;
-}
-
-#cntMenuSelection > * {
-    filter: drop-shadow(0.5vh 0.5vh 0.6vh rgb(0, 0, 0));
-
-}
-
-#cntMenuSelection > label {
-    position: relative;
-    top: 20vh;
-    height: 20vh;
-}
-
-#ulSelection > li {
-    list-style-image: url("images/bullet.png");
-    background-size: 10vh;
-}
-
-#ulSelection > li:hover {
-    list-style-image: url("images/bulletHover.png");
-}
-/***********************************************************/
-
-/************************** Title **************************/
-#cntTitle {
-    color: white;
-    font-weight: Lighter;
-    height: 100vh;
-}
-
-#cntTitle > label{
-    margin: auto;
-    display: table;
-    position: relative;
-    font-size: 10vh;
-    top: 25vh;
-}
-
-#cntTitle > #lblTitle {
-    font-size: 25vh;
-    font-weight: normal;
-    font-family: system-ui;
-}
-/***********************************************************/
-
-/************************ Portfolio ************************/
-#cntRotor {
-    position: absolute;
-    top: 0;
-    left: -52vh;
-    width: 100vh;
-    height: 100vh;
-    border-radius: 50%;
-    border-color: white;
-    border: 20px solid white;
-    background-image: linear-gradient(to right, darkred,red 50%,blue 50%,darkblue);
-    z-index: 1;
-    transform: rotate(0deg);
-    transition-duration: 0.5s;
-
-}
-
-#cntRotor > div {
-    transition-duration: 0.5s;
-
-}
-
-.InnerRotorTop, .InnerRotorTopDiagonal,
-.InnerRotorBottomDiagonal, .InnerRotorMiddle {
-    position: absolute;
-    top: -11vh;
-    left: 42vh;
-    width: 20vh;
-    height: 20vh;
-    border-radius: 50%;
-    border-color: white;
-    border: 5px solid white;
-    z-index: 1;
-    background-size:contain;
-    background-color: white;
-}
-
-.InnerRotorMiddle {
-    top: 38vh;
-    left: 90vh;
-}
-
-.InnerRotorTopDiagonal, .InnerRotorBottomDiagonal {
-    top: 3vh;
-    left: 76vh;
-}
-
-.InnerRotorBottomDiagonal {
-    top: 75vh;
-}
-
-#cntCircleBottom {
-    background-image: url("images/invalidItem.png");
-    top: 90vh;
-}
-
-#cntCircleLeftMiddle {
-    background-image: url("images/invalidItem.png");
-    top: 25vh;
-    left: -100vh;
-}
-
-#cntCircleBottomLeft, #cntCircleTopLeft {
-    left: 3vh;
-}
-
-#cntCircleMiddleCenter{
-    background-image: url("images/circularArrows.png");
-    left: 40vh;
-    background-color: white;
-}
-
-#cntCircleTop {
-    background-image: url("images/invalidItem.png");
-}
-
-#cntCircleTopRight {
-    background-image: url("images/invalidItem.png");
-}
-
-#cntCircleMiddleRight {
-    background-image: url("images/intragardenThumbnail.png");
-}
-
-#cntCircleBottomRight {
-    background-image: url("images/goBack.png");
-}
-
-#cntCircleBottom {
-    background-image: url("images/invalidItem.png");
-}
-
-#cntCircleBottomLeft{
-    background-image: url("images/invalidItem.png");
-}
-
-#cntCircleMiddleLeft {
-
-    background-image: url("images/invalidItem.png");
-    left: -11vh;
-}
-
-#cntCircleTopLeft {
-    background-image: url("images/invalidItem.png");
-}
-/***********************************************************/
-
-/*********************** Project Page **********************/
-#cntProject, #cntProjectText {
-    position: absolute;
-    top: 10vh;
-    left: 10vw;
-    width: 75vw;
-    height: 75vh;
-    z-index: 2;
-    overflow: auto;
-}
-
-#cntProjectText {
-    background-color: white;
-    border: 10px solid black;
-    left: 18vw;
-    width: 54vw;
-    height: 55vh;
-}
-
-#lblProjectTitle, #lblProjectDescription {
-    font-weight: bold;
-    font-size: 8vh;
-    display: block;
-    left: 1vw;
-    position: absolute;
-    word-wrap: break-word;
-    white-space: pre-line;
-}
-
-#lblProjectTitle {
-    left: 19vw;
-    -webkit-text-stroke: 0.2vh black;
-    color: white;
-}
-
-#lblProjectDescription {
-    font-weight: normal;
-    font-size: 5vh;
-}
-
-#lblProjectStart, #lblProjectBack {
-    width: 10vw;
-    height: 5vh;
-    color: white;
-    background-color: green;
-    position: absolute;
-    left: 7vh;
-    top: 44vh;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3vh;
-    font-weight: bold;
-    border-radius: 5vh;
-}
-
-#lblProjectBack {
-    top: 51vh;
-    background-color: red;
-}
-
-#imgProjectCover {
-    margin-left: 3vh;
-    margin-top: 2vh;
-    width: 14vw;
-
-    border-radius:1vh;
-}
-
-/***********************************************************/
-
-/************************** Gallery ************************/
-#cntGallery {
-   display:flex;
-   justify-content: center;
-}
-
-#cntGalleryItems {
-    width: 159vh;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    row-gap: 1vh;
-    column-gap: 2vh;
-    flex-wrap: wrap;
-}
-
-#cntGalleryItems > img {
-    width: 24.949698189134807vh;
-    height: 18.712273641851105vh;
-    top: 9vh;
-    left: 17vh;
-    position: relative;
-
-}
-
-#cntExpandedViewBackground {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0, 0.3);
-    top: 0;
-    z-index: 100;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#imgExpandedImage {
-    max-width: 140vh;
-    max-height: 80vh;
-
-}
-
-#imgDetails, #imgExitGallery {
-    position: absolute;
-
-    bottom: 3vh;
-    right: 5vh;
-    width: 13vh;
-    height: 13vh;
-}
-
-/***********************************************************/
-
-/***************************** Me **************************/
-.slide-in-top {
-    animation-name: slide-in-top;
-    animation-duration: 0.5s;
-    perspective: 1000px;
-}
-
-#cntBusinessCard {
-    background-image:linear-gradient(100deg,white 49.5%, darkgray 50%, blue 50%);
-    display:flex;
-    position: absolute;
-    height: 38vw;
-    width: 74vw;
-    top: 5vw;
-    left: 13vw;
-    background-color: white;
-
-}
-
-#cntBusinessCardText {
-    position: absolute;
-    top: 5vw;
-    left: 5vw;
-    width: 60vw;
-    height: 30vw;
-    font-size: 5vw;
-    font-weight: bold;
-    color: black;
-    text-align: center;
-
-}
-
-#imgMyself {
-    position: absolute;
-    width: 25vw;
-    height: 20vw;
-    bottom: 0;
-    left: 5vw;
-}
-
-#cntBusinessCard > label {
-    flex-direction: row;
 }
